@@ -56,7 +56,7 @@ ROOT_URLCONF = 'producthunt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['producthunt/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,5 +123,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
+STATICFILES_DIRS = [
 
-STATIC_URL = '/static/'
+     os.path.join(BASE_DIR, 'producthunt/static/')
+]
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  #here we add static files related to media
+STATIC_URL = '/static/'                          #this static may be any thing
