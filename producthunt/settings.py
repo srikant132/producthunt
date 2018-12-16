@@ -128,6 +128,9 @@ STATICFILES_DIRS = [
      os.path.join(BASE_DIR, 'producthunt/static/')
 ]
 
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')  #here we add static files related to media
 STATIC_URL = '/static/'                          #this static may be any thing
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  #here we add static files related to media
+MEDIA_URL = '/media/'                          #this static may be any thing
