@@ -5,13 +5,15 @@
 {% block content  %}
 
 
-{% if error %}
-
+  {% if error %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    <strong> <p>{{ error }}</p></strong>
+    </div>
+  {% endif %}
 <br>
-<br>
-
-{% endif %}
-
 <div class="col-md-6 offset-md-3">
   <div class="jumbotron ">
 <h2 class="text-center "">SignUp</h2>
@@ -27,7 +29,7 @@
   <div class="form-group">
     <input type="password" class="form-control"  placeholder="Confirm Password" name="password2">
   </div>
-  <button type="submit" class="btn btn-primary">Sign Up</button>
+  <button type="submit" class="btn btn-primary">SignUp</button>
 </form>
 </div>
 </div>
